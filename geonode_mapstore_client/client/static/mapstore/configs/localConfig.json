@@ -1950,6 +1950,15 @@
             },
             {
                 "name": "Locate"
+            },
+            {
+                "name": "GeonodeMetadata"
+            },
+            {
+                "name": "IgracDownload"
+            },
+            {
+                "name": "Annotations"
             }
         ],
         "map_edit": [
@@ -1976,6 +1985,9 @@
             },
             {
                 "name": "BackgroundSelector"
+            },
+            {
+                "name": "Annotations"
             },
             {
                 "name": "Identify",

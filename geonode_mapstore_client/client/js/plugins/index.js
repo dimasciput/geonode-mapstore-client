@@ -90,6 +90,10 @@ function splitLazyAndStaticPlugins(pluginsDefinition) {
 // provides a way to import dynamically plugins similar to extensions
 
 export const plugins = {
+    AnnotationsPlugin: toLazyPlugin(
+        'Annotations',
+        import(/* webpackChunkName: 'plugins/annotations' */ '@mapstore/framework/plugins/Annotations')
+    ),
     LayerDownloadPlugin: toLazyPlugin(
         'LayerDownload',
         import(/* webpackChunkName: 'plugins/layer-download' */ '@mapstore/framework/plugins/LayerDownload')
@@ -265,6 +269,14 @@ export const plugins = {
     DrawerMenuPlugin: toLazyPlugin(
         'DrawerMenu',
         import(/* webpackChunkName: 'plugins/drawer-menu-plugin' */ '@mapstore/framework/plugins/DrawerMenu')
+    ),
+    GeonodeMetadataPlugin: toLazyPlugin(
+        'GeonodeMetadata',
+        import(/* webpackChunkName: 'plugins/geonode-metadata-plugin' */ '@js/plugins/GeonodeMetadata')
+    ),
+    IgracDownloadPlugin: toLazyPlugin(
+        'IgracDownload',
+        import(/* webpackChunkName: 'plugins/igrac-download-plugin' */ '@js/plugins/IgracDownload')
     )
 };
 
